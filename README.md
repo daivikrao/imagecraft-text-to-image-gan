@@ -207,6 +207,7 @@ imagecraft-text-to-image-gan/
 │   ├── Poster.pdf
 │   ├── Test_Cases.pdf
 │   └── Review3_Presentation_and_Demo.mp4
+├── Dockerfile                    # published to ghcr.io on every release
 └── requirements.txt
 ```
 
@@ -242,6 +243,19 @@ python src/generate.py "this flower is yellow in color with oval shaped petals" 
 ```
 
 Or open [`notebooks/text_to_image_gan.ipynb`](notebooks/text_to_image_gan.ipynb) in Colab or SageMaker Studio Lab and run it top to bottom.
+
+**Or use Docker** (no local Python setup)
+
+The image contains the code and all dependencies. Mount a folder holding `flowers/` and the GloVe file at `/data`:
+
+```bash
+docker pull ghcr.io/daivikrao/imagecraft-text-to-image-gan:latest
+
+docker run --rm -v "$PWD:/data" ghcr.io/daivikrao/imagecraft-text-to-image-gan src/preprocess.py
+docker run --rm -v "$PWD:/data" ghcr.io/daivikrao/imagecraft-text-to-image-gan src/train.py --epochs 500
+docker run --rm -v "$PWD:/data" ghcr.io/daivikrao/imagecraft-text-to-image-gan \
+    src/generate.py "a white flower resembling jasmine" --weights /data/flowers/model/generator_epoch_500.weights.h5
+```
 
 ---
 

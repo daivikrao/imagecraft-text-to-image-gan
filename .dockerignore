@@ -1,0 +1,9 @@
+.git
+assets
+docs
+notebooks
+flowers
+*.npy
+*.h5
+glove*.txt
+**/__pycache__
