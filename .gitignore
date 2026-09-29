@@ -1,0 +1,15 @@
+# Dataset, embeddings and checkpoints (large, download separately)
+flowers/
+glove*.txt
+*.npy
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
