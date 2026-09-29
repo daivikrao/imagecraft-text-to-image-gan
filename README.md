@@ -189,7 +189,7 @@ The last row forces the discriminator to check that the image matches the text a
 ## 📂 Repository structure
 
 ```
-textToImage_Capstone/
+imagecraft-text-to-image-gan/
 ├── notebooks/
 │   └── text_to_image_gan.ipynb   # original end-to-end notebook, outputs kept
 ├── src/                          # the same pipeline as Python modules
@@ -217,8 +217,8 @@ textToImage_Capstone/
 **1. Install**
 
 ```bash
-git clone https://github.com/daivikrao/textToImage_Capstone.git
-cd textToImage_Capstone
+git clone https://github.com/daivikrao/imagecraft-text-to-image-gan.git
+cd imagecraft-text-to-image-gan
 pip install -r requirements.txt
 ```
 
